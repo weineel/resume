@@ -132,6 +132,9 @@ export default {
 .basic--intent .content span {
   padding-left: 20px;
 }
+.basic--information .content {
+  padding-left: 20px;
+}
 .ext {
   width: 60%;
 }
