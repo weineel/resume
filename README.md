@@ -9,7 +9,7 @@
 ### Dev
 
 ``` bash
-cd docker-xj-alumnus-dev
+cd docker-resume
 # 启动开发环境
 docker-compose up nodejs
 ```
@@ -23,9 +23,12 @@ docker-compose up nodejs
 ### Build
 
 ``` bash
-cd docker-xj-alumnus-dev
+cd docker-resume
 # 编译到dist文件夹下, 把编译好的文件放到服务器目录下即可。
 docker-compose run nodejs npm run build
+
+# dist文件夹中的内容，发布到gh-pages分支
+git subtree push --prefix=dist origin gh-pages
 ```
 
 ## Build Setup
