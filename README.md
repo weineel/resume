@@ -27,8 +27,9 @@ cd docker-resume
 # 编译到dist文件夹下, 把编译好的文件放到服务器目录下即可。
 docker-compose run nodejs npm run build
 
-# dist文件夹中的内容，发布到gh-pages分支
+# dist文件夹中的内容，发布到gh-pages分支, 这种方式不能忽略dist文件夹。
 git subtree push --prefix=dist origin gh-pages
+# 或者使用 travis 进行持续集成
 ```
 
 ## Build Setup
