@@ -1,5 +1,5 @@
 language: node_js
-node_js: stable
+node_js: 8.9.3
 
 # Travis-CI Caching
 cache:
@@ -18,14 +18,14 @@ after_script:
   - git config user.email "LiJF_wn@163.com"
   - git add .
   - git commit -m "Update resume"
-  - git push --force "https://${GH_TOKEN}@${GH_REF}" gh-pages
+  - git push --force "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
 # E: Build LifeCycle
 
 branches:
   only:
-    - src
+    - master
 env:
  global:
    - GH_REF: github.com/weineel/resume.git
    # 设置一个加密的环境变量，GH_TOKEN环境变量的值
-   - secure: "L9d3YA5QZCSOoUliEIsNyjBlmEWiNnuKuLA5/XbpEacuj5F04Aic2pxkUXWzhj42CcTStChwzF3MACBmfaOlqeygUEQ32I158DIihnF8wvCSY4gALyFGpIzRmehvkjeSfAXiERfrx1IJNoy30Ea220I5cpcyIHFVBWViguDImxLGACzW/T8NiQV8+ZU4/ML3IvuVUng/7zWn/yLrITQUJTyynh8Vxtys9elDSuMBRwa26ZWljPr2KUrvQGPg0J9PwOleIPfCzLVsGdelJuzVHA9rTzhaA47EVweCl+SvFwG57rRD0EtJqkq547MuGaYGgLTBMhJlGNBe9d6nx0AcfhCbSEYB//E4xCwpV/BzjfWBBPSUtvIaDdu2IYXx2ACiq+xrd5LQnPsIDb6/ZDyUjFllSofNI8l4bQlmCNkS++DL0f+lYmCxdW3ZMy6dGNu81cVX3RcBvDa4/BszdLAK4owO0ROAXHIGEtvdJJg6KfmIUpI6EMjeZBLLRwclrjVaMm/mSdjCIgDNLbzbehthGzQyd+rbaa2m74jhAd2GxiRdEqE37F+78mEUW+OQ2BkEOXGwTGfhDVHsD0JlPLx1dIIBv/eZqcZiKcJIRrdKutsEsh7t2Ft5M8luWHeyrE5bcay/hEIH8J5rP0KAnwPwapxfQ3rUOJl8WGDzy8JDvN0="
+   - secure: "bkha8ZAutOOW0FsWrpxELZ5G2/yjaQFM2AjmdHSxrjmKCiOt9GlxXRjTW7krdejAhmUjXF85uygpcl0d15AFqAjDwiyYXKEYHFA9U8kCxq3PwiAvB8eJ1iU5SIga53R82idl4erC2MEz6g3PzwvwFcm8ka9PpqlwuDqnRL6PRvHhrUdLaTJt8M56no6YoT1SYPUfN7t3DqXRl4WZ4PmA6INVmBBm/DEHgD9Ituhb/o3cdO9kT2RMuo65Z+4oj2G08/W2QJ8Ul4CzigtAB1nnnz/g/3ufWsNr7QdprLowzmYyuUxIvffB1G3GKHDD27AUaocBgOGaRyvAaZqjbfw8Wd/y/ZkznaQmr2/GAaD25Mpi3ckZNOJtzhOYUL9Vf/iHKUAtecGumWpQQN0FCYwjMQ8TrVjQWez/kg8bAd5gm6zxThfmoAr5h6JjuI6VKAq3a6Ko9LYDX25PNTJXRBtLe4fuTCJ6bjoD9Oi/MgsdlYeEIsTG2VJB/Yev6upiXifAKHwe97okh69oopkC4f9QksU++0uyJj9BwyHRqS+A8TecOhVultaVHkdoho11oDrMX+0P5fSDP4jrzLPiSCzdj8wxvL1nt9W6/KJXBVz2u1rucgJtWS/7Hj1m0YxtgCuiYlvlqEcFJtzRKt6Z7aw6/qgqzKHaBfkcA4bhKsUEcbc="
