@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  nodejs:
+    image: xj-alumnus-front-dev
+    build:
+      context: ./nodejs
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 1337:1337
+      - 8888:8888
+      # json-server 主页, 使用webpack-dev-server代理访问
+      # - 9090:9090
+    volumes:
+      - ../:/var/code
