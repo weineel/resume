@@ -268,6 +268,12 @@ export default {
           'Mybatis',
         ]
       }, {
+        type: '版本控制',
+        items: [
+          'git',
+          'git-flow'
+        ]
+      }, {
         type: 'Devops(了解)',
         items: [
           'Docker',
